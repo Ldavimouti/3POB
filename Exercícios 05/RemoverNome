@@ -31,11 +31,16 @@ class Main {
         System.out.print("Digite o nome que deseja remover: ");
         String removerNome = scan.next();
         
-        lista.remove(lista.indexOf(removerNome));
+        boolean removido = lista.remove(removerNome);
         
-        System.out.println();
-         for(String k : lista){
-            System.out.println(k);
+        if(removido){
+            System.out.println("Nome removido");
+             for(String k : lista){
+                System.out.println(k);
+            }
+        }
+        else{
+            System.out.print("Nome nao encontrado");
         }
     }
 }
